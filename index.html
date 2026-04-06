@@ -351,9 +351,12 @@
           </div>
         </div>
         <div class="contact-right scroll-anim">
-          <form class="contact-form" action="https://formsubmit.co/eljuliri@gmail.com" method="POST">
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/eljuliri@gmail.com" method="POST">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
+            <input type="hidden" name="_next" value="http://localhost:3000/#contact">
+            <input type="text" name="_honey" style="display:none">
             <div class="form-group">
               <label for="name" data-i18n="contact.form.name">Nombre</label>
               <input type="text" id="name" name="name" required placeholder="Tu nombre">
@@ -370,7 +373,8 @@
               <label for="message" data-i18n="contact.form.message">Mensaje</label>
               <textarea id="message" name="message" rows="4" required placeholder="Cuentame sobre tu proyecto..."></textarea>
             </div>
-            <button type="submit" class="btn btn-dark btn-full" data-i18n="contact.form.send">Enviar mensaje</button>
+            <button type="submit" class="btn btn-dark btn-full" id="formSubmitBtn" data-i18n="contact.form.send">Enviar mensaje</button>
+            <p class="form-status" id="formStatus"></p>
           </form>
         </div>
       </div>

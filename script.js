@@ -155,6 +155,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Contact form (AJAX submit)
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('formSubmitBtn');
+      const status = document.getElementById('formStatus');
+      const origText = btn.textContent;
+      btn.textContent = currentLang === 'es' ? 'Enviando...' : 'Sending...';
+      btn.disabled = true;
+      status.textContent = '';
+      status.className = 'form-status';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          status.textContent = currentLang === 'es' ? 'Mensaje enviado correctamente!' : 'Message sent successfully!';
+          status.className = 'form-status success';
+          form.reset();
+        } else {
+          throw new Error('error');
+        }
+      } catch {
+        status.textContent = currentLang === 'es' ? 'Error al enviar. Intenta de nuevo.' : 'Failed to send. Try again.';
+        status.className = 'form-status error';
+      }
+      btn.textContent = origText;
+      btn.disabled = false;
+    });
+  }
+
   // Project tabs
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {

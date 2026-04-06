@@ -205,6 +205,9 @@ a{text-decoration:none;color:inherit}
 .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(22,163,74,.15)}
 .form-group input::placeholder,.form-group textarea::placeholder{color:var(--text-muted)}
 .btn-full{width:100%;justify-content:center}
+.form-status{font-size:.85rem;margin-top:8px;text-align:center;min-height:20px}
+.form-status.success{color:var(--accent)}
+.form-status.error{color:#ef4444}
 
 /* ===== FOOTER ===== */
 .footer{padding:24px 0;border-top:1px solid var(--border)}
