@@ -6,8 +6,8 @@ const translations = {
     hero: { badge: 'Disponible para trabajar', greeting: 'Hola! Soy Julian Ardila -', roleHighlight: 'Growth Lead', cta: 'Contr\u00e1tame', desc: 'Especializado en escalar negocios combinando inteligencia de datos, automatizacion e IA con estrategia de contenido y marketing digital.', ctaExp: 'Ver mi experiencia', ctaProj: 'Ver proyectos', scroll: 'DESPLAZATE' },
     about: {
       label: 'Sobre Mi', title: 'Construyendo el futuro digital', subtitle: 'Con pasion por la excelencia y atencion al detalle', skillsTitle: 'Habilidades Clave', download: 'Descargar CV',
-      stats: { years: 'ANOS DE EXPERIENCIA', companies: 'EMPRESAS & CLIENTES', projects: 'PROYECTOS DIGITALES' },
-      bio: 'Comunicador Social con mas de 6 anos de experiencia en fintech, fondos de inversion, productos digitales y agencias. He trabajado en mercados de inversion y brokerage en EE. UU. y Latinoamerica. Combino estrategia de contenido, social media, UX writing, email marketing y SEO con una mirada analitica y de producto. Mi foco: que la comunicacion sea clara, coherente con la marca y se traduzca en resultados medibles.',
+      stats: { years: 'A\u00d1OS DE EXPERIENCIA', companies: 'EMPRESAS & CLIENTES', projects: 'PROYECTOS DIGITALES' },
+      bio: 'Comunicador Social con m\u00e1s de 6 a\u00f1os de experiencia en fintech, fondos de inversi\u00f3n, productos digitales y agencias. He trabajado en mercados de inversi\u00f3n y brokerage en EE. UU. y Latinoam\u00e9rica. Combino estrategia de contenido, social media, UX writing, email marketing y SEO con una mirada anal\u00edtica y de producto. Mi foco: que la comunicaci\u00f3n sea clara, coherente con la marca y se traduzca en resultados medibles.',
       bio2: 'Actualmente lidero la estrategia de crecimiento en Agencia Digital Flash, donde diseno dashboards integrados, automatizo procesos con IA y construyo pipelines de prospeccion outbound.'
     },
     exp: {
@@ -71,7 +71,7 @@ function getVal(obj, path) {
 
 const seoMeta = {
   es: {
-    desc: 'Julian Ardila - Growth Lead & Estratega Digital. Especializado en escalar negocios con datos, automatizacion e IA. +6 anos de experiencia en fintech, marketing digital y productos.',
+    desc: 'Julian Ardila - Growth Lead & Estratega Digital. Especializado en escalar negocios con datos, automatizaci\u00f3n e IA. +6 a\u00f1os de experiencia en fintech, marketing digital y productos.',
     ogDesc: 'Especializado en escalar negocios combinando inteligencia de datos, automatizacion e IA con estrategia de contenido y marketing digital.',
     locale: 'es_CO'
   },
