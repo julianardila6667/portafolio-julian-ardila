@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://julianardila6667.github.io/portafolio-julian-ardila/sitemap.xml

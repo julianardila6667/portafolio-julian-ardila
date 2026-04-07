@@ -69,6 +69,19 @@ function getVal(obj, path) {
   return path.split('.').reduce((o, k) => o && o[k], obj);
 }
 
+const seoMeta = {
+  es: {
+    desc: 'Julian Ardila - Growth Lead & Estratega Digital. Especializado en escalar negocios con datos, automatizacion e IA. +6 anos de experiencia en fintech, marketing digital y productos.',
+    ogDesc: 'Especializado en escalar negocios combinando inteligencia de datos, automatizacion e IA con estrategia de contenido y marketing digital.',
+    locale: 'es_CO'
+  },
+  en: {
+    desc: 'Julian Ardila - Growth Lead & Digital Strategist. Specialized in scaling businesses with data intelligence, automation and AI. 6+ years in fintech, digital marketing and products.',
+    ogDesc: 'Specialized in scaling businesses by combining data intelligence, automation and AI with content strategy and digital marketing.',
+    locale: 'en_US'
+  }
+};
+
 function setLanguage(lang) {
   currentLang = lang;
   localStorage.setItem('lang', lang);
@@ -83,6 +96,16 @@ function setLanguage(lang) {
   // Switch CV download link
   const cvLink = document.getElementById('cvDownload');
   if (cvLink) cvLink.href = lang === 'en' ? 'assets/CV_Julian_Ardila_EN.docx' : 'assets/CV_Julian_Ardila_ES.docx';
+
+  // Update SEO meta tags
+  const meta = seoMeta[lang];
+  const set = (id, attr, val) => { const el = document.getElementById(id); if (el) el.setAttribute(attr, val); };
+  set('metaDesc', 'content', meta.desc);
+  set('ogTitle', 'content', translations[lang].title);
+  set('ogDesc', 'content', meta.ogDesc);
+  set('ogLocale', 'content', meta.locale);
+  set('twTitle', 'content', translations[lang].title);
+  set('twDesc', 'content', meta.ogDesc);
 }
 
 // ===== INIT =====
